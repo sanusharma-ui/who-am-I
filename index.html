@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+<!-- ScrollReveal Library -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!-- Typewriter Effect -->
+<script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.18.2/dist/core.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanu Sharma</title>
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+  <header>
+    <h1>Sanu Sharma</h1>
+    <p>AI Engineer | Vishnu Devotee | Dreamer with a Plan</p>
+  </header>
+
+  <section class="section about">
+    <h2>About Me</h2>
+    <p>
+      Namaste 🙏 I'm Sanu Sharma — a passionate AI enthusiast and robotics geek who also finds deep purpose in spirituality.
+      I believe in using technology to uplift society, and my mission is to make education and healthcare completely free for everyone.
+      I was born in Jharkhand, and ever since childhood, I've been deeply interested in tech and robotics. Back in 2011, my dream was to build a driverless car — but Elon Musk, who I truly admire, beat me to it!
+
+I love listening to music and working late at night — thats when Im most productive. I did my schooling in Nagpur and am currently pursuing higher studies at GH Raisoni College I am 19 years old my D.O.B is 30/01/2006.
+
+Im passionate about many fields — sometimes I work on AI, other times on space science or robotics. But whatever I do, I give it 100% focus and always see it through to the end.
+
+Some of my upcoming projects include:
+
+An AI-powered chatbot
+
+An AI therapist
+
+...and theres a lot more in the pipeline!
+
+If you ever need help with anything related to AI, robotics, or tech, feel free to reach out. Thank you!
+    </p>
+  </section>
+
+  <section class="section interests">
+    <h2>My Interests</h2>
+    <ul>
+      <li>Artificial Intelligence & Machine Learning</li>
+      <li>Robotics and Automation</li>
+      <li>Geopolitics and Space Science</li>
+      <li>Building tech with purpose</li>
+    </ul>
+  </section>
+
+  <section class="section contact">
+    <h2>Some projects</h2>
+    <p>Mini projects</p>
+    <div>
+      <a href="https://universal-encoder-sanusharma.netlify.app/" target="_blank">universal-encoder</a>
+      <a href="https://sanusharma-ui.github.io/SharmaGalactix/index.html" target="_blank">Space Website</a>
+      <a href="#" target="_blank">GitHub</a>
+    </div>
+  </section>
+
+  <section class="section contact-panel">
+  <h2>Work With Me</h2>
+  <p>Have a project or an idea? Let's talk! Fill the form below:</p>
+
+  <form action="https://formspree.io/f/xanbjzlq" method="POST" id="contact-form">
+    
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="message">What work do you want to get done?</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <input type="hidden" name="_subject" value="💼 New Work Request from Portfolio!" />
+    
+    <button type="submit">Send Request</button>
+
+    <p id="form-msg" style="margin-top: 15px; font-weight: bold;"></p>
+  </form>
+</section>
+<div id="particles-js"></div>
+
+  <script>
+  // Typewriter effect
+  const typewriter = new Typewriter(document.querySelector("header p"), {
+    loop: true,
+    delay: 75,
+  });
+
+  typewriter
+    .pauseFor(500)
+    .typeString('AI Engineer 💻 | Vishnu Devotee 🙏 | Dreamer with a Plan 🚀')
+    .pauseFor(2000)
+    .deleteAll()
+    .typeString('Coding Karma, Building Dharma ⚙️🕉️')
+    .pauseFor(2000)
+    .start();
+
+  // ScrollReveal animations
+  ScrollReveal().reveal('.section', {
+    duration: 1200,
+    origin: 'bottom',
+    distance: '50px',
+    easing: 'ease-in-out',
+    reset: false
+  });
+
+  // Light/Dark toggle
+  const toggle = document.createElement("button");
+  toggle.innerText = "🌓";
+  toggle.style.position = "fixed";
+  toggle.style.top = "20px";
+  toggle.style.right = "20px";
+  toggle.style.padding = "10px 15px";
+  toggle.style.borderRadius = "50%";
+  toggle.style.border = "none";
+  toggle.style.cursor = "pointer";
+  toggle.style.zIndex = 9999;
+  toggle.style.backgroundColor = "#00ffe0";
+  toggle.style.boxShadow = "0 0 10px #00ffe0";
+  document.body.appendChild(toggle);
+
+  let isDark = true;
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+    isDark = !isDark;
+    toggle.innerText = isDark ? "🌓" : "🌞";
+  });
+</script>
+<script>
+  const form = document.getElementById("contact-form");
+  const msg = document.getElementById("form-msg");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      msg.innerText = "🎉 Thank you! Your request has been sent successfully.";
+      msg.style.color = "#00ffe0";
+      form.reset();
+    } else {
+      msg.innerText = "❌ Oops! Something went wrong. Try again later.";
+      msg.style.color = "salmon";
+    }
+  });
+</script>
+<button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Mode</button>
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle("light-mode");
+  }
+</script>
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 60,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#00ffe0"
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#00ffe0",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 2
+      },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.5
+      },
+      "size": {
+        "value": 3
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab"
+        }
+      },
+      "modes": {
+        "grab": {
+          "distance": 200,
+          "line_linked": {
+            "opacity": 0.7
+          }
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+</body>
+</html>
+

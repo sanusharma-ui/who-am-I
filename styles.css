@@ -1,0 +1,529 @@
+
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  overflow-x: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+header {
+  text-align: center;
+  margin-top: 40px;
+  animation: fadeIn 1.5s ease;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #00ffe0;
+  text-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0;
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 10px #00ffe0;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffe0, 0 0 30px #00ffe0;
+  }
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-top: 10px;
+  animation: slideUp 1.5s ease;
+}
+
+.section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  animation: fadeIn 1.2s ease;
+}
+
+.section h2 {
+  color: #00ffe0;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  border-left: 5px solid #00ffe0;
+  padding-left: 15px;
+}
+
+.section p,
+.section li {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+.interests ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.interests li {
+  background: rgba(0, 0, 0, 0.4);
+  margin: 10px 0;
+  padding: 12px 18px;
+  border-left: 4px solid #00ffe0;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.interests li:hover {
+  transform: translateX(8px);
+  background-color: rgba(0, 255, 224, 0.1);
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  color: #00ffe0;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.contact a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #00ffe0;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.contact a:hover {
+  color: #ffffff;
+}
+
+.contact a:hover::after {
+  width: 100%;
+}
+
+.contact-panel p {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+form {
+  margin-top: 20px;
+  animation: fadeIn 1s ease;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  background: rgba(0, 255, 224, 0.1);
+  box-shadow: 0 0 5px #00ffe0;
+}
+
+button[type="submit"] {
+  padding: 12px 25px;
+  background-color: #00ffe0;
+  color: #000;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #00c2b4;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .section {
+    padding: 20px;
+  }
+}
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  overflow-x: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+header {
+  text-align: center;
+  margin-top: 40px;
+  animation: fadeIn 1.5s ease;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #00ffe0;
+  text-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0;
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 10px #00ffe0;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffe0, 0 0 30px #00ffe0;
+  }
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-top: 10px;
+  animation: slideUp 1.5s ease;
+}
+
+.section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  animation: fadeIn 1.2s ease;
+}
+
+.section h2 {
+  color: #00ffe0;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  border-left: 5px solid #00ffe0;
+  padding-left: 15px;
+}
+
+.section p,
+.section li {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+.interests ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.interests li {
+  background: rgba(0, 0, 0, 0.4);
+  margin: 10px 0;
+  padding: 12px 18px;
+  border-left: 4px solid #00ffe0;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.interests li:hover {
+  transform: translateX(8px);
+  background-color: rgba(0, 255, 224, 0.1);
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  color: #00ffe0;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.contact a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #00ffe0;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.contact a:hover {
+  color: #ffffff;
+}
+
+.contact a:hover::after {
+  width: 100%;
+}
+
+.contact-panel p {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+form {
+  margin-top: 20px;
+  animation: fadeIn 1s ease;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  background: rgba(0, 255, 224, 0.1);
+  box-shadow: 0 0 5px #00ffe0;
+}
+
+button[type="submit"] {
+  padding: 12px 25px;
+  background-color: #00ffe0;
+  color: #000;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #00c2b4;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .section {
+    padding: 20px;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body.light-mode {
+  background: linear-gradient(135deg, #f8f8ff, #e0e0f0);
+  color: #111;
+}
+
+body.light-mode .section {
+  background: rgba(255, 255, 255, 0.6);
+  color: #111;
+  border: 1px solid #ccc;
+}
+
+body.light-mode .section h2,
+body.light-mode header h1 {
+  color: #004f4f;
+  text-shadow: none;
+}
+
+body.light-mode .interests li {
+  background: rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #004f4f;
+}
+
+body.light-mode input,
+body.light-mode textarea {
+  background: #fff;
+  color: #111;
+}
+
+body.light-mode .contact a {
+  color: #004f4f;
+}
+
+body.light-mode button[type="submit"] {
+  background-color: #004f4f;
+  color: #fff;
+}
+/* Modern Colorful Glow Input Styles */
+input[type="text"],
+input[type="email"],
+textarea {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  transition: all 0.4s ease-in-out;
+  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+input:focus,
+textarea:focus {
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 12px #00ffe0, 0 0 20px #00ffe0;
+}
+
+/* Gradient Button Pulse */
+button[type="submit"] {
+  background: linear-gradient(135deg, #00ffe0, #8e2de2);
+  box-shadow: 0 4px 15px rgba(0, 255, 224, 0.4);
+  color: black;
+  animation: pulse 2s infinite;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #8e2de2, #00ffe0);
+  color: white;
+}
+
+/* Form message feedback glow */
+#form-msg {
+  font-size: 1.1rem;
+  color: #00ffe0;
+  text-shadow: 0 0 6px #00ffe0;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px #00ffe0;
+  }
+  50% {
+    box-shadow: 0 0 20px #00ffe0;
+  }
+  100% {
+    box-shadow: 0 0 5px #00ffe0;
+  }
+}
+
+/* Rainbow Glow Border on Section Hover */
+.section:hover {
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #00ffe0, #ff00ff, #00ffc8, #f0f) 1;
+  animation: borderGlow 3s linear infinite;
+}
+
+@keyframes borderGlow {
+  0% { border-image-slice: 1; }
+  50% { border-image-slice: 1; }
+  100% { border-image-slice: 1; }
+}
+
+/* Light Mode Button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #00ffe0;
+  color: #000;
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffe0;
+  z-index: 999;
+  transition: background 0.3s;
+}
+
+.theme-toggle:hover {
+  background: #00c2b4;
+}
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Make sure it stays behind everything */
+  background: #000; /* Optional: to match your theme */
+}
